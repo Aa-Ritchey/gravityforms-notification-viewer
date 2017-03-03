@@ -3,7 +3,7 @@
  * Plugin Name: Gravity Forms Notification Viewer &beta;
  * Plugin URL: https://github.com/Aa-Ritchey/gravityforms-notification-viewer/
  * Description: Viewing who receives notifications when a form is filled out. This is an unofficial extension.
- * Version: 0.6
+ * Version: 0.7
  * Author: Aaron Ritchey
  * Author URI: http://aaronritchey.com/
  * License: GPL3
@@ -12,7 +12,6 @@
  * - check that plugin meets best standards
  * - remove unnecessary code and comments
  * - migrate CSS of view_notification page to its own file(?)
- * - add link on Plugins page to view_notifications
  */
 
 // Code for checking whether this plugin will work.
@@ -56,6 +55,14 @@ function gfnv_call_view_notifications() {
 	}
 	
 }
+
+function gfnv_add_action_links ( $links ) {
+	$mylinks = array(
+		'<a href="' . admin_url( 'admin.php?page=gfnv_view_notifications' ) . '">View Notifications</a>',
+	);
+	return array_merge( $mylinks, $links );
+}
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'gfnv_add_action_links' );
 
 function gfnv_plugin_not_installed_text() {
 	return '<strong>Gravity Forms Notification Viewer</strong> will not work unless <em>Gravity Forms</em> is installed.';

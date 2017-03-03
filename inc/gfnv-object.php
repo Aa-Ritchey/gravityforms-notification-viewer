@@ -114,6 +114,17 @@ class Gravity_Forms_Notification_Viewer {
 			// Skip if blank.
         	if (!$email) { continue; }
         	
+        	// Special designation for {admin_email}.
+        	if (preg_match('/\{admin_email\}/', $email)) {
+        		$email = '(ADMIN)';
+        	}
+        	
+        	// Special designation for email addresses
+        	//   defined by the form.
+        	if (preg_match('/\{.*\}/', $email)) {
+        		$email = '(FORM-FIELD)';
+        	}
+        	
 			$this->gfnv_store_email($email, $notice_id, $record_as);
 		}
     	

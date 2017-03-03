@@ -168,5 +168,7 @@
 		<li>Faded text means the notification will not get sent because either the form or the notification is inactive.</li>
 		<li>Hover on a form ID hyperlink to see the form's name.</li>
 		<li>Hover on a form notification hyperlink to see the notification's name.</li>
+		<li>The email <strong>(FORM-FIELD)</strong> is unknown, and can vary based on what the user submitted.</li>
+		<li>The email <strong>(ADMIN)</strong> is whatever <tt>{admin_email}</tt> is set to for this WordPress install.</li>
 	</ul>
 </div>

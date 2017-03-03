@@ -9,7 +9,6 @@
  * License: GPL3
  *
  * Remaining Features:
- * - filter out "{email-5}" while keeping "{admin-email}"
  * - check that plugin meets best standards
  * - remove unnecessary code and comments
  * - migrate CSS of view_notification page to its own file(?)

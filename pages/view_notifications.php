@@ -3,63 +3,6 @@
 	$gfnv_object = new Gravity_Forms_Notification_Viewer();
 ?>
 
-<!-- TODO: migrate this CSS into a separate file(?) -->
-<style>
-	ul.gfnv_list {
-		list-style: initial;
-		padding-left: 1em;
-	}
-	
-	#gfnv_table {
-		/* reset */
-		width: auto;
-		
-		/* kludge, this fixes a design bug caused by border-left below */
-		border-left: 0;
-	}
-
-	#gfnv_table thead .leftmost-heading-col {
-		text-align: right;
-	}
-	
-	#gfnv_table thead th {
-		text-align: center;
-		border-left: 1px solid #e5e5e5;
-	}
-	
-	/* TODO: move to the proper place. */
-	#gfnv_table td {
-		text-align: center;
-		border-left: 1px solid #e5e5e5;
-	}
-	
-	#gfnv_table .email {
-		text-align: right;
-	}
-	
-	#gfnv_table .inactive {
-		/* we don't use opacity because it will also affect border-left */
-		color: #dddddd;
-	}
-	
-	#gfnv_table .inactive:hover {
-		/* improve usability */
-		/* probably not the exact color; close enough */
-		color: inherit;
-	}
-	#gfnv_table .inactive a {
-		opacity: 0.2;
-	}
-	
-	#gfnv_table .inactive:hover a {
-		/* improve usability */
-		/* (meant to activate when hovering over cell) */
-		opacity: 1;
-	}
-</style>
-
-
-
 <div class="wrap">
 	<h1>Gravity Forms Notification Viewer &beta;</h1>
     <p>See who is notified when a form is submitted.</p>

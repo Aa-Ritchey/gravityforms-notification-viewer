@@ -1,0 +1,56 @@
+
+/* Show the bullets of bulleted lists again. */
+ul.gfnv_list {
+	list-style: initial;
+	padding-left: 1em;
+}
+
+
+
+#gfnv_table {
+	/* reset */
+	width: auto;
+	
+	/* Kludge. This fixes a design bug caused by border-left below. */
+	/* Some clever CSS could alleviate this. */
+	border-left: 0;
+}
+
+#gfnv_table thead .leftmost-heading-col {
+	text-align: right;
+}
+
+#gfnv_table thead th {
+	text-align: center;
+	border-left: 1px solid #e5e5e5;
+}
+
+/* TODO: move to the proper place. */
+#gfnv_table td {
+	text-align: center;
+	border-left: 1px solid #e5e5e5;
+}
+
+#gfnv_table .email {
+	text-align: right;
+}
+
+#gfnv_table .inactive {
+	/* we don't use opacity because it will also affect border-left */
+	color: #dddddd;
+}
+
+#gfnv_table .inactive:hover {
+	/* improve usability */
+	/* probably not the exact color; close enough */
+	color: inherit;
+}
+#gfnv_table .inactive a {
+	opacity: 0.2;
+}
+
+#gfnv_table .inactive:hover a {
+	/* improve usability */
+	/* (meant to activate when hovering over cell) */
+	opacity: 1;
+}
